@@ -2,7 +2,7 @@
 const meals = [
     {
         name: "Spaghetti Bolognese",
-        image: "https://www.slimmingeats.com/blog/wp-content/uploads/2010/04/spaghetti-bolognese-36-720x720.jpg",
+        image: "image/Spaghetti_Bolognese.png",
         ingredients: [
             "Spaghetti 200 grams",
             "Minced Beef 500 grams",
@@ -59,16 +59,22 @@ const meals = [
         recipe: "Preheat the oven to 375°F (190°C). In a small bowl, whisk together the flour, baking soda, and salt. Set aside. In a large bowl, using an electric mixer, beat the softened butter, white sugar, and brown sugar until creamy. Beat in the eggs one at a time, then stir in the vanilla extract. Gradually mix the dry ingredients into the wet ingredients until just combined. Stir in the chocolate chips. Drop rounded tablespoons of dough onto ungreased baking sheets. Bake for 9 to 11 minutes, or until the edges are golden brown. Let cool on the baking sheet for a few minutes before transferring to a wire rack to cool completely."
     }
 ];
-const mealContainer = document.getElementById('meal');
+const nameContainer = document.getElementById('name');
+const imageContainer = document.getElementById('image');
+const recipeContainer = document.getElementById('recipe');
 const generateBtn = document.getElementById('generate-btn');
 function getRandomMeal() {
     return meals[Math.floor(Math.random() * meals.length)];
 }
 function displayMeal(meal) {
-    if (mealContainer) {
-        mealContainer.innerHTML = `
-            <h2>${meal.name}</h2>
-            <img src="${meal.image}" alt="${meal.name}" width="300">
+    if (nameContainer) {
+        nameContainer.innerHTML = `<h2>${meal.name}</h2>`;
+    }
+    if (imageContainer) {
+        imageContainer.innerHTML = `<h2>${meal.image}</h2>`;
+    }
+    if (recipeContainer) {
+        recipeContainer.innerHTML = `
             <h3>Ingredients:</h3>
             <ul>
                 ${meal.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
