@@ -8,7 +8,7 @@ interface Meal {
 const meals: Meal[] = [
     {
         name: "Spaghetti Bolognese",
-        image: "001 - Random Meal Generator/image/Spaghetti_Bolognese.png",
+        image: "image/Spaghetti_Bolognese.png",
         ingredients: [
             "Spaghetti 200 grams",
             "Minced Beef 500 grams",
@@ -20,7 +20,7 @@ const meals: Meal[] = [
     },
     {
         name: "Classic Pancakes",
-        image: "https://hips.hearstapps.com/hmg-prod/images/classic-pancakes-2-1661197992.jpeg?crop=0.8893333333333334xw:1xh;center,top&resize=1200:*",
+        image: "image/Classic_Pancakes.png",
         ingredients: [
             "All-purpose flour 1½ cups",
             "Baking powder 3½ teaspoons",
@@ -34,7 +34,7 @@ const meals: Meal[] = [
     },
     {
         name: "Chicken and Broccoli Stir-Fry",
-        image: "https://www.allrecipes.com/thmb/p2aG_tF7S4_R_456aYpT1L-BqE8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/223402-chicken-and-broccoli-stir-fry-DDMFS-4x3-3d0224422e844a42918548982a51167b.jpg",
+        image: "image/Chicken_and_Broccoli_Stir-Fry.png",
         ingredients: [
             "Boneless, skinless chicken breasts 1 pound cut into bite-sized pieces",
             "Soy sauce ½ cup",
@@ -50,7 +50,7 @@ const meals: Meal[] = [
     },
     {
         name: "Classic Chocolate Chip Cookies",
-        image: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Chocolate_chip_cookie_3_2017.jpg",
+        image: "image/Classic_Chocolate_Chip_Cookies.png",
         ingredients: [
             "All-purpose flour 2¼ cups",
             "Baking soda 1 teaspoon",
@@ -76,10 +76,10 @@ function getRandomMeal(): Meal {
 
 function displayMeal(meal: Meal): void {
     if (nameContainer){
-        nameContainer.innerHTML = `<h2>${meal.name}</h2>`
+        nameContainer.innerHTML = `<h2>${meal.name}</h2>`;
     }
     if (imageContainer){
-        imageContainer.innerHTML = `<h2>${meal.image}</h2>`
+        imageContainer.innerHTML = `<img src="${meal.image}" alt="${meal.name}" width="300">`;
     }
     if (recipeContainer) {
         recipeContainer.innerHTML = `
@@ -88,9 +88,7 @@ function displayMeal(meal: Meal): void {
                 ${meal.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
             </ul>
             <h3>Recipe</h3>
-            <ul>
-                ${meal.recipe}
-            </ul>
+            <p>${meal.recipe}</p>
         `;
     }
 }
