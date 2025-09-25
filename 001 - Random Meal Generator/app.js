@@ -1,10 +1,5 @@
-interface Meal {
-    name: string;
-    image: string;
-    ingredients: string[];
-}
-
-const meals: Meal[] = [
+"use strict";
+const meals = [
     {
         name: "Spaghetti Bolognese",
         image: "https://www.slimmingeats.com/blog/wp-content/uploads/2010/04/spaghetti-bolognese-36-720x720.jpg",
@@ -21,15 +16,12 @@ const meals: Meal[] = [
         ingredients: ["Broccoli", "Carrots", "Bell Peppers", "Soy Sauce", "Noodles"]
     }
 ];
-
-const mealContainer = document.getElementById('meal') as HTMLDivElement;
-const generateBtn = document.getElementById('generate-btn') as HTMLButtonElement;
-
-function getRandomMeal(): Meal {
+const mealContainer = document.getElementById('meal');
+const generateBtn = document.getElementById('generate-btn');
+function getRandomMeal() {
     return meals[Math.floor(Math.random() * meals.length)];
 }
-
-function displayMeal(meal: Meal): void {
+function displayMeal(meal) {
     if (mealContainer) {
         mealContainer.innerHTML = `
             <h2>${meal.name}</h2>
@@ -41,12 +33,10 @@ function displayMeal(meal: Meal): void {
         `;
     }
 }
-
 generateBtn.addEventListener('click', () => {
     const randomMeal = getRandomMeal();
     displayMeal(randomMeal);
 });
-
 // Display a meal on initial load
 const initialMeal = getRandomMeal();
 displayMeal(initialMeal);
