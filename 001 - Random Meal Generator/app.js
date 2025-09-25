@@ -71,7 +71,7 @@ function displayMeal(meal) {
         nameContainer.innerHTML = `<h2>${meal.name}</h2>`;
     }
     if (imageContainer) {
-        imageContainer.innerHTML = `<img src="${meal.image}" alt="${meal.name}" width="300">`;
+        imageContainer.innerHTML = `<img src="${meal.image}" alt="${meal.name}">`;
     }
     if (recipeContainer) {
         recipeContainer.innerHTML = `
