@@ -1,0 +1,43 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.moods {
+    margin-bottom: 20px;
+}
+
+.mood {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.happy {
+    background-color: blue;
+}
+
+.neutral {
+    background-color: green;
+}
+
+.sad {
+    background-color: red;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(31, 20px);
+    gap: 5px;
+}
+
+.day {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
