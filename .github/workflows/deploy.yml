@@ -25,4 +25,4 @@ jobs:
       - name: Random Meal Generator
         run:  aws s3 sync "./001 - Random Meal Generator" s3://001-random-meal-generator --delete
       - name: Mood Calendar
-        run: aws s3 sync "./002 - Mood Calendar" s3://001-mood-calendar --delete
+        run: aws s3 sync "./002 - Mood Calendar" s3://002-mood-calendar --delete
