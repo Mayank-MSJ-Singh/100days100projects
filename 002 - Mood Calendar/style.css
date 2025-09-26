@@ -30,14 +30,34 @@ body {
 }
 
 .calendar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.month {
+    width: 350px;
+    margin-bottom: 20px;
+}
+
+.days-of-week, .days {
     display: grid;
-    grid-template-columns: repeat(31, 20px);
+    grid-template-columns: repeat(7, 1fr);
     gap: 5px;
 }
 
 .day {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     border: 1px solid #ccc;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.day.empty {
+    border: none;
+    cursor: default;
 }
