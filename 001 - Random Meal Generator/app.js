@@ -43,7 +43,7 @@ const meals = [
         recipe: "In a small bowl, whisk together the soy sauce, water, brown sugar, cornstarch, minced garlic, and ginger to create the sauce. Set aside. Heat sesame oil in a large skillet or wok over medium-high heat. Add the chicken pieces and cook until browned and cooked through. Add the broccoli florets to the skillet and stir-fry for 2-3 minutes until they start to turn bright green and tender-crisp. Stir the sauce one more time and pour it into the skillet with the chicken and broccoli. Cook, stirring constantly, until the sauce thickens and coats the chicken and broccoli evenly. Serve immediately with steamed rice."
     },
     {
-        name: "Classic Chocolate Chip Cookies",
+        name: "Chocolate Chip Cookies",
         image: "image/Classic_Chocolate_Chip_Cookies.png",
         ingredients: [
             "All-purpose flour 2¼ cups",
