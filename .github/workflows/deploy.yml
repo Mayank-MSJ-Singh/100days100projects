@@ -35,4 +35,4 @@ jobs:
           # Enable static website hosting
           aws s3 website s3://$BUCKET/ --index-document index.html --error-document error.html
           # Sync files and make them public individually
-          aws s3 sync "./003 - Perlin Noise Flow Field" s3://$BUCKET --delete --acl public-read
+          aws s3 sync "./003 - Perlin Noise Flow Field" s3://$BUCKET --delete
