@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+#sketch-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

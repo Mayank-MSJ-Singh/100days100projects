@@ -26,3 +26,14 @@ jobs:
         run:  aws s3 sync "./001 - Random Meal Generator" s3://001-random-meal-generator --delete
       - name: Mood Calendar
         run: aws s3 sync "./002 - Mood Calendar" s3://002-mood-calendar --delete
+
+      - name: Deploy Perlin Noise Flow Field
+        run: |
+            BUCKET=003-perlin-noise-flow-field
+            aws s3api head-bucket --bucket $BUCKET 2>/dev/null || aws s3 mb s3://$BUCKET
+            aws s3 website s3://$BUCKET/ --index-document index.html --error-document error.html
+            aws s3api put-bucket-policy --bucket $BUCKET --policy '{
+              "Version":"2012-10-17",
+              "Statement":[{"Sid":"PublicReadGetObject","Effect":"Allow","Principal":"*","Action":"s3:GetObject","Resource":"arn:aws:s3:::'$BUCKET'/*"}]
+            }'
+            aws s3 sync "./003 - Perlin Noise Flow Field" s3://$BUCKET --delete
