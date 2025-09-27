@@ -29,11 +29,10 @@ jobs:
 
       - name: Deploy Perlin Noise Flow Field
         run: |
-            BUCKET=003-perlin-noise-flow-field
-            aws s3api head-bucket --bucket $BUCKET 2>/dev/null || aws s3 mb s3://$BUCKET
-            aws s3 website s3://$BUCKET/ --index-document index.html --error-document error.html
-            aws s3api put-bucket-policy --bucket $BUCKET --policy '{
-              "Version":"2012-10-17",
-              "Statement":[{"Sid":"PublicReadGetObject","Effect":"Allow","Principal":"*","Action":"s3:GetObject","Resource":"arn:aws:s3:::'$BUCKET'/*"}]
-            }'
-            aws s3 sync "./003 - Perlin Noise Flow Field" s3://003-perlin-noise-flow-field --delete
+          BUCKET=003-perlin-noise-flow-field
+          # Create bucket if it doesn't exist
+          aws s3api head-bucket --bucket $BUCKET 2>/dev/null || aws s3 mb s3://$BUCKET
+          # Enable static website hosting
+          aws s3 website s3://$BUCKET/ --index-document index.html --error-document error.html
+          # Sync files and make them public individually
+          aws s3 sync "./003 - Perlin Noise Flow Field" s3://$BUCKET --delete --acl public-read
