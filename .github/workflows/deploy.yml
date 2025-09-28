@@ -36,3 +36,6 @@ jobs:
           aws s3 website s3://$BUCKET/ --index-document index.html --error-document error.html
           # Sync files and make them public individually
           aws s3 sync "./003 - Perlin Noise Flow Field" s3://$BUCKET --delete
+
+      - name: Catch The Insect
+        run: aws s3 sync "./004 - Catch The Insect" s3://004-catch-the-insect --delete
