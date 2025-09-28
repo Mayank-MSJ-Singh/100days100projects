@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
 * {
@@ -157,6 +156,45 @@ h1 {
     height: 100px;
 }
 
+/* Player ID input */
+#player_id_input {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+#player_id_input::placeholder {
+    color: #ddd;
+}
+
+/* Stop button */
+.stop-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-family: 'Press Start 2P';
+    border: none;
+    border-radius: 10px;
+    background-color: #ff4d4d;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.stop-btn:hover {
+    background-color: #ff1a1a;
+}
+
 /* SOCIAL PANEL CSS */
 .social-panel-container {
     position: fixed;
@@ -306,7 +344,6 @@ h1 {
 }
 
 @media screen and (max-width: 480px) {
-
     .social-panel-container.visible {
         transform: translateX(0px);
     }
