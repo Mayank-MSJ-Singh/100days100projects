@@ -1,0 +1,123 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.4;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.resume-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.heading h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.heading p {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+}
+
+.contact-info {
+    font-size: 0.9rem;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.contact-info a:hover {
+    color: #0056b3;
+}
+
+section {
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid #000;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.subheading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.subheading .left, .subheading .right {
+    font-size: 0.9rem;
+}
+
+.subheading .right {
+    text-align: right;
+}
+
+ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style-position: outside;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.project-item {
+    margin-bottom: 1rem;
+}
+
+.project-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-links a {
+    color: #007bff;
+    text-decoration: underline;
+    margin-left: 1rem;
+}
+
+.project-links a:hover {
+    color: #0056b3;
+}
+
+.technical-skills p {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+.certifications .subheading {
+    align-items: center;
+}
+
+.certifications a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.certifications a:hover {
+    color: #0056b3;
+}
