@@ -40,5 +40,5 @@ jobs:
       - name: Catch The Insect
         run: aws s3 sync "./004 - Catch The Insect" s3://004-catch-the-insect --delete
 
-      - name: Catch The Insect
-        run: aws s3 sync "./006 - Paper/index.html" s3://006-paper --delete
+      - name: Paper
+        run: aws s3 cp "./006 - Paper/index.html" s3://006-paper/index.html
