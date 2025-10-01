@@ -9,3 +9,7 @@
 004 - Catch The Insect : https://d2mem11htv32jt.cloudfront.net/
 
 005 - Resume : https://main.d1ra8xyo5jivbg.amplifyapp.com/
+
+006 - Paper : http://006-paper.s3-website.us-east-2.amazonaws.com/
+
+007 - Login : https://d2nhqsq5gcikgy.cloudfront.net/
