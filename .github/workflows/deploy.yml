@@ -42,3 +42,6 @@ jobs:
 
       - name: Paper
         run: aws s3 cp "./006 - Paper/index.html" s3://006-paper/index.html
+
+      - name: Login
+        run: aws s3 cp "./007 - Login/index.html" s3://007-login/index.html
