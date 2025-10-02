@@ -13,3 +13,5 @@
 006 - Paper : http://006-paper.s3-website.us-east-2.amazonaws.com/
 
 007 - Login : https://d2nhqsq5gcikgy.cloudfront.net/
+
+008 - MCP Demo : 18.141.58.184 (Public IPv4 address)
