@@ -15,3 +15,5 @@
 007 - Login : https://d2nhqsq5gcikgy.cloudfront.net/
 
 008 - MCP Demo : 18.141.58.184 (Public IPv4 address)
+
+013 - Random Quote Generator : http://013-quote.s3-website.us-east-2.amazonaws.com/
