@@ -1,0 +1,223 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --background-color: #f4f7f6;
+    --text-color: #333;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: var(--secondary-color);
+}
+
+.upload-section, .status-section, .log-section, .files-section {
+    margin-bottom: 25px;
+}
+
+.file-drop {
+    border: 2px dashed var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.file-drop.dragover {
+    background-color: #e9ecef;
+}
+
+.drop-content i {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.file-details {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.controls input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.progress-wrap {
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--success-color);
+    width: 0;
+    transition: width 0.4s ease;
+}
+
+.progress-text {
+    text-align: center;
+    font-weight: bold;
+    color: var(--success-color);
+}
+
+.status {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.log-section h2, .files-section h2 {
+    margin-bottom: 10px;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Uploaded Files Section */
+.file-list {
+    border: 1px solid #e9ecef;
+    border-radius: var(--border-radius);
+    background-color: var(--light-color);
+    padding: 15px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    margin-bottom: 8px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.file-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+.file-item .file-name {
+    flex: 1;
+    color: var(--dark-color);
+    font-weight: 500;
+    word-break: break-all;
+}
+
+.file-item .download-btn {
+    background-color: var(--success-color);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.file-item .download-btn:hover {
+    background-color: #1e7e34;
+}
+
+.file-list .placeholder {
+    color: var(--secondary-color);
+    text-align: center;
+    font-style: italic;
+    padding: 10px;
+}
+
+.log {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: var(--border-radius);
+    padding: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.log div {
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.log .error {
+    color: var(--danger-color);
+    background-color: #f8d7da;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    color: var(--secondary-color);
+}

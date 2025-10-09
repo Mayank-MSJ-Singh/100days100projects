@@ -45,3 +45,9 @@ jobs:
 
       - name: Login
         run: aws s3 cp "./007 - Login/index.html" s3://007-login/index.html
+
+      - name: Pre-Signed URL
+        run: |
+          aws s3 cp "./015 - Presigned URLs/index.html" s3://014-presigned-url/index.html
+          aws s3 cp "./015 - Presigned URLs/app.js" s3://014-presigned-url/app.js
+          aws s3 cp "./015 - Presigned URLs/style.css" s3://014-presigned-url/style.css

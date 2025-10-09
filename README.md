@@ -19,3 +19,5 @@
 013 - Random Quote Generator : http://013-quote.s3-website.us-east-2.amazonaws.com/
 
 014 - my site list : http://014-my-site-list.s3-website.us-east-2.amazonaws.com/
+
+015 - Presigned URLs : http://014-presigned-url.s3-website.us-east-2.amazonaws.com/
