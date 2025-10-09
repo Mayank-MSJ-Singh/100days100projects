@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Day 13 — Pre-signed S3 Upload & Download</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main class="container">
+    <header class="header">
+        <h1><i class="fas fa-cloud-upload-alt"></i> Secure File Uploader</h1>
+        <p>Upload and manage files securely using AWS S3 Pre-signed URLs</p>
+    </header>
+
+    <!-- Upload Section -->
+    <section class="upload-section">
+        <div class="file-drop" id="dropZone">
+            <input type="file" id="fileInput" hidden />
+            <div class="drop-content">
+                <i class="fas fa-cloud-download-alt fa-3x"></i>
+                <p id="dropText">Click to choose a file or drag it here</p>
+                <small id="hint">Max file size: 50MB</small>
+            </div>
+        </div>
+
+        <div class="file-details" id="fileDetails" style="display: none;">
+            <p><strong>Selected file:</strong> <span id="selectedFilename"></span></p>
+        </div>
+
+        <div class="controls">
+            <input type="text" id="filenameInput" placeholder="Custom filename (optional)" />
+            <button id="uploadBtn" class="btn"><i class="fas fa-upload"></i> Upload</button>
+        </div>
+    </section>
+
+    <!-- Status Section -->
+    <section class="status-section">
+        <div class="progress-wrap" id="progressWrap" style="display: none;">
+            <div class="progress-bar" id="progressBar"></div>
+            <div class="progress-text" id="progressText">0%</div>
+        </div>
+        <div id="status" class="status"></div>
+    </section>
+
+    <!-- File List Section -->
+    <section class="files-section" id="filesSection" style="display:none;">
+        <h2><i class="fas fa-folder-open"></i> Uploaded Files</h2>
+        <div class="file-list" id="fileList">
+            <p class="placeholder">No files uploaded yet...</p>
+        </div>
+    </section>
+
+    <!-- Upload Log Section -->
+    <section class="log-section" id="logSection" style="display: none;">
+        <h2><i class="fas fa-history"></i> Upload Log</h2>
+        <div class="log" id="log"></div>
+    </section>
+
+    <footer class="footer">
+        <small>
+            Replace <code>API_URL</code> in <code>app.js</code> with your API Gateway endpoint.<br />
+            AWS Lambda endpoints: <code>/generate-upload-url</code>, <code>/list-files</code>, <code>/generate-download-url</code>
+        </small>
+    </footer>
+</main>
+
+<script src="app.js" defer></script>
+</body>
+</html>
